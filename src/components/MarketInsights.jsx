@@ -67,22 +67,22 @@ export default function MarketInsights({ commodities, lang, t }) {
   };
 
   return (
-    <div className="space-y-8 animate-fadeIn">
+    <div className="space-y-8 animate-fadeIn text-slate-900">
       {/* Banner */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-500/20 text-teal-300 border border-teal-500/30 mb-2">
-            <BrainCircuit className="w-3.5 h-3.5 text-teal-400" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-800 border border-teal-300 mb-2">
+            <BrainCircuit className="w-3.5 h-3.5 text-teal-700" />
             {t.insights.title}
           </div>
-          <h2 className="text-2xl font-black text-white">Kerala Market Intelligence & AI Hub</h2>
-          <p className="text-xs text-slate-400 mt-1">{t.insights.subtitle}</p>
+          <h2 className="text-2xl font-black text-slate-900">Kerala Market Intelligence & AI Hub</h2>
+          <p className="text-xs text-slate-600 font-medium mt-1">{t.insights.subtitle}</p>
         </div>
 
         {/* Download CSV Report */}
         <button
           onClick={handleExportCSV}
-          className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold px-4 py-2.5 rounded-xl text-xs transition-all shadow-lg shadow-emerald-900/50 self-start md:self-auto"
+          className="flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-4 py-2.5 rounded-xl text-xs transition-all shadow-md self-start md:self-auto"
         >
           <FileSpreadsheet className="w-4 h-4" />
           <span>{t.insights.exportReport}</span>
@@ -92,35 +92,35 @@ export default function MarketInsights({ commodities, lang, t }) {
       {/* Grid: Weather Impact & AI Commentary */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         {/* Weather Bulletins */}
-        <div className="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
-          <h3 className="text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-            <CloudRain className="w-5 h-5 text-cyan-400" />
+        <div className="lg:col-span-6 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
+          <h3 className="text-base font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+            <CloudRain className="w-5 h-5 text-cyan-600" />
             {t.insights.weatherTitle}
           </h3>
 
           <div className="space-y-3 text-xs">
-            <div className="bg-slate-950 p-4 rounded-2xl border border-cyan-500/30">
-              <div className="flex items-center justify-between font-bold text-cyan-300 mb-1">
+            <div className="bg-cyan-50/60 p-4 rounded-2xl border border-cyan-200">
+              <div className="flex items-center justify-between font-bold text-cyan-900 mb-1">
                 <span className="flex items-center gap-1.5">
-                  <CloudRain className="w-4 h-4 text-cyan-400" />
+                  <CloudRain className="w-4 h-4 text-cyan-600" />
                   Idukki & Wayanad High-Range Rainfall
                 </span>
-                <span className="text-[10px] bg-cyan-950 px-2 py-0.5 rounded text-cyan-400">ACTIVE</span>
+                <span className="text-[10px] bg-cyan-200 text-cyan-800 px-2 py-0.5 rounded font-bold">ACTIVE</span>
               </div>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed font-medium">
                 Moderate to heavy shower forecast in Kattappana cardamom belt. Tapping delays in rubber plantations expected for next 48 hours; dry RSS-4 prices expected to stay elevated.
               </p>
             </div>
 
-            <div className="bg-slate-950 p-4 rounded-2xl border border-amber-500/30">
-              <div className="flex items-center justify-between font-bold text-amber-300 mb-1">
+            <div className="bg-amber-50/60 p-4 rounded-2xl border border-amber-200">
+              <div className="flex items-center justify-between font-bold text-amber-900 mb-1">
                 <span className="flex items-center gap-1.5">
-                  <Waves className="w-4 h-4 text-amber-400" />
+                  <Waves className="w-4 h-4 text-amber-600" />
                   Coastal High Wave & Wind Alert (Kollam & Kozhikode)
                 </span>
-                <span className="text-[10px] bg-amber-950 px-2 py-0.5 rounded text-amber-400">ADVISORY</span>
+                <span className="text-[10px] bg-amber-200 text-amber-800 px-2 py-0.5 rounded font-bold">ADVISORY</span>
               </div>
-              <p className="text-slate-300 leading-relaxed">
+              <p className="text-slate-700 leading-relaxed font-medium">
                 Fishermen advised caution along Neendakara and Beypore coastlines. Deep-sea landings may reduce by 15% tomorrow, expected to nudge Seer Fish and Prawn prices upwards.
               </p>
             </div>
@@ -128,23 +128,23 @@ export default function MarketInsights({ commodities, lang, t }) {
         </div>
 
         {/* AI Market Commentary */}
-        <div className="lg:col-span-6 bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl space-y-4">
-          <h3 className="text-base font-bold text-white flex items-center gap-2 border-b border-slate-800 pb-3">
-            <Sparkles className="w-5 h-5 text-amber-400" />
+        <div className="lg:col-span-6 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
+          <h3 className="text-base font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-3">
+            <Sparkles className="w-5 h-5 text-amber-600" />
             {t.insights.aiAnalystTitle}
           </h3>
 
           <div className="space-y-3 text-xs">
-            <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800">
-              <span className="text-emerald-400 font-bold block mb-1">📈 Rubber RSS-4 Bullish Signal</span>
-              <p className="text-slate-300 leading-relaxed">
+            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <span className="text-emerald-800 font-bold block mb-1">📈 Rubber RSS-4 Bullish Signal</span>
+              <p className="text-slate-700 leading-relaxed font-medium">
                 International synthetic rubber prices surged +2.4% on Tokyo Exchange. Domestic Kottayam APMC spot market maintaining healthy buying interest from automobile tyre manufacturers.
               </p>
             </div>
 
-            <div className="bg-slate-950 p-4 rounded-2xl border border-slate-800">
-              <span className="text-teal-300 font-bold block mb-1">🥥 Copra & Coconut Oil Stability</span>
-              <p className="text-slate-300 leading-relaxed">
+            <div className="bg-slate-50 p-4 rounded-2xl border border-slate-200">
+              <span className="text-teal-800 font-bold block mb-1">🥥 Copra & Coconut Oil Stability</span>
+              <p className="text-slate-700 leading-relaxed font-medium">
                 Raw coconut prices holding firm at ₹36/nut in Vatakara. Kerafed procurement drives helping prevent steep declines despite Kangayam mill supply arrivals.
               </p>
             </div>
@@ -153,19 +153,19 @@ export default function MarketInsights({ commodities, lang, t }) {
       </div>
 
       {/* KeramBot Interactive AI Assistant */}
-      <div className="bg-slate-900 border border-teal-500/30 rounded-3xl p-6 sm:p-8 shadow-2xl space-y-4">
-        <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
-          <div className="w-10 h-10 rounded-xl bg-teal-500/20 border border-teal-500/30 flex items-center justify-center">
-            <BrainCircuit className="w-5 h-5 text-teal-300" />
+      <div className="bg-white border border-teal-200 rounded-3xl p-6 sm:p-8 shadow-sm space-y-4">
+        <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
+          <div className="w-10 h-10 rounded-xl bg-teal-100 border border-teal-300 flex items-center justify-center">
+            <BrainCircuit className="w-5 h-5 text-teal-700" />
           </div>
           <div>
-            <h3 className="text-lg font-bold text-white">{t.insights.askKeramBot}</h3>
-            <p className="text-xs text-slate-400">Ask any question on Kerala commodity prices, harvesting timing, or district trade strategies</p>
+            <h3 className="text-lg font-bold text-slate-900">{t.insights.askKeramBot}</h3>
+            <p className="text-xs text-slate-500 font-medium">Ask any question on Kerala commodity prices, harvesting timing, or district trade strategies</p>
           </div>
         </div>
 
         {/* Chat Log Window */}
-        <div className="bg-slate-950 rounded-2xl border border-slate-800 p-4 h-64 overflow-y-auto space-y-3 text-xs">
+        <div className="bg-slate-50 rounded-2xl border border-slate-200 p-4 h-64 overflow-y-auto space-y-3 text-xs">
           {messages.map((m, idx) => (
             <div
               key={idx}
@@ -174,8 +174,8 @@ export default function MarketInsights({ commodities, lang, t }) {
               <div
                 className={`max-w-md p-3.5 rounded-2xl font-medium leading-relaxed ${
                   m.sender === 'user'
-                    ? 'bg-emerald-600 text-white rounded-br-none'
-                    : 'bg-slate-900 border border-slate-700 text-slate-200 rounded-bl-none'
+                    ? 'bg-emerald-600 text-white rounded-br-none shadow-sm'
+                    : 'bg-white border border-slate-200 text-slate-800 rounded-bl-none shadow-sm'
                 }`}
               >
                 {m.text}
@@ -191,11 +191,11 @@ export default function MarketInsights({ commodities, lang, t }) {
             value={inputMessage}
             onChange={(e) => setInputMessage(e.target.value)}
             placeholder={t.insights.botPlaceholder}
-            className="flex-1 bg-slate-950 text-white px-4 py-3 rounded-xl border border-slate-700 text-xs focus:border-teal-500 focus:outline-none"
+            className="flex-1 bg-slate-50 text-slate-900 px-4 py-3 rounded-xl border border-slate-200 text-xs font-semibold focus:border-teal-600 focus:outline-none"
           />
           <button
             type="submit"
-            className="bg-teal-600 hover:bg-teal-500 text-white font-bold px-5 py-3 rounded-xl text-xs transition-all flex items-center gap-1.5 shadow-lg shadow-teal-900/40"
+            className="bg-teal-600 hover:bg-teal-700 text-white font-bold px-5 py-3 rounded-xl text-xs transition-all flex items-center gap-1.5 shadow-sm"
           >
             <Send className="w-4 h-4" />
             <span>{t.insights.send}</span>
