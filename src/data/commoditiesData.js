@@ -14,7 +14,7 @@ export const commodities = [
     retailPrice: 226.00,
     change24h: 3.40,
     change24hPercent: 1.63,
-    volume: "1,450 Quintals",
+    volume: "1,450 Qtl",
     sparkline: [205, 206, 204, 208, 210, 209, 212.5],
     districtPrices: {
       KTM: 212.50, EKM: 211.00, PTA: 210.50, IDK: 209.00,
@@ -53,7 +53,7 @@ export const commodities = [
     retailPrice: 12200.00,
     change24h: -120.00,
     change24hPercent: -1.04,
-    volume: "3,200 Quintals",
+    volume: "3,200 Qtl",
     sparkline: [11600, 11580, 11550, 11500, 11480, 11470, 11450],
     districtPrices: {
       KKD: 11450, KSG: 11300, KNR: 11380, MLP: 11400,
@@ -92,7 +92,7 @@ export const commodities = [
     retailPrice: 182.00,
     change24h: 1.50,
     change24hPercent: 0.90,
-    volume: "45,000 Litres",
+    volume: "45,000 L",
     sparkline: [165, 166, 165.5, 167, 167.5, 168, 168],
     districtPrices: {
       KLM: 168, TVM: 172, EKM: 170, TCR: 169,
@@ -170,7 +170,7 @@ export const commodities = [
     retailPrice: 3100.00,
     change24h: 85.00,
     change24hPercent: 3.28,
-    volume: "68 Tonnes (Spices Park Auction)",
+    volume: "68 Tonnes",
     sparkline: [2520, 2550, 2580, 2600, 2620, 2650, 2680],
     districtPrices: {
       IDK: 2680, EKM: 2720, KTM: 2710, TCR: 2730,
@@ -248,7 +248,7 @@ export const commodities = [
     retailPrice: 210.00,
     change24h: -15.00,
     change24hPercent: -7.89,
-    volume: "420 Tonnes (Harbor Landings)",
+    volume: "420 Tonnes",
     sparkline: [210, 205, 195, 190, 185, 180, 175],
     districtPrices: {
       KLM: 175, TVM: 185, ALP: 170, EKM: 180,
@@ -348,6 +348,84 @@ export const commodities = [
       { date: "Sep 27", price: 660, volume: 175 },
       { date: "Oct 02", price: 663, volume: 178 },
       { date: "Oct 07", price: 665, volume: 180 }
+    ]
+  },
+  {
+    id: "pineapple-vazhakulam",
+    name: "Pineapple (Mauritius)",
+    nameMl: "കൈതച്ചക്ക (മൗറീഷ്യസ്)",
+    category: "fruits",
+    categoryNameEn: "Fruits & Bananas",
+    categoryNameMl: "പഴവർഗ്ഗങ്ങൾ & നേന്ത്രൻ",
+    unit: "kg",
+    grade: "Vazhakulam GI Tagged Grade A",
+    primaryDistrict: "Ernakulam",
+    farmgatePrice: 32.00,
+    mandiPrice: 38.00,
+    retailPrice: 48.00,
+    change24h: 2.00,
+    change24hPercent: 5.56,
+    volume: "650 Tonnes",
+    sparkline: [34, 35, 36, 36.5, 37, 37.5, 38],
+    districtPrices: {
+      EKM: 38, KTM: 37.5, PTA: 39, IDK: 36.5,
+      TCR: 39.5, PKD: 40, MLP: 41, KKD: 41.5,
+      WYD: 42, KNR: 42.5, KSG: 43, KLM: 39,
+      TVM: 40.5, ALP: 38.5
+    },
+    advisory: {
+      farmer: "GI tagged Mauritius variety receiving strong inter-state demand in Delhi and Mumbai.",
+      trader: "Vazhakulam market turnover is steady; good profit margins for northern dispatches.",
+      cooperative: "Pineapple Farmers Association maintaining baseline procurement rates.",
+      consumer: "Fresh sweet pineapple available across local retail markets."
+    },
+    history1M: [
+      { date: "Sep 07", price: 33, volume: 580 },
+      { date: "Sep 12", price: 34, volume: 600 },
+      { date: "Sep 17", price: 35.5, volume: 620 },
+      { date: "Sep 22", price: 36, volume: 635 },
+      { date: "Sep 27", price: 37, volume: 640 },
+      { date: "Oct 02", price: 37.5, volume: 645 },
+      { date: "Oct 07", price: 38, volume: 650 }
+    ]
+  },
+  {
+    id: "paddy-jyothi",
+    name: "Paddy / Rice (Jyothi)",
+    nameMl: "നെല്ല് (ജ്യോതി)",
+    category: "tubers",
+    categoryNameEn: "Tubers & Vegetables",
+    categoryNameMl: "കിഴങ്ങുവർഗ്ഗങ്ങളും പച്ചക്കറികളും",
+    unit: "quintal",
+    grade: "Raw Paddy Grade A (14% Moisture)",
+    primaryDistrict: "Palakkad",
+    farmgatePrice: 2820.00,
+    mandiPrice: 2950.00,
+    retailPrice: 3250.00,
+    change24h: 15.00,
+    change24hPercent: 0.51,
+    volume: "4,500 Qtl",
+    sparkline: [2920, 2930, 2935, 2940, 2945, 2948, 2950],
+    districtPrices: {
+      PKD: 2950, ALP: 2940, TCR: 2960, KLM: 2970,
+      TVM: 2980, KTM: 2955, PTA: 2965, EKM: 2975,
+      MLP: 2960, KKD: 2970, WYD: 2930, KNR: 2985,
+      KSG: 2990, IDK: 2950
+    },
+    advisory: {
+      farmer: "Supplyco paddy procurement ongoing at ₹28.20/kg. Ensure moisture content is verified before delivery.",
+      trader: "Alathur and Kuttanad harvesting arrivals meeting mill processing capacity.",
+      cooperative: "Paddy Farmers Cooperative societies disbursing procurement incentives.",
+      consumer: "Matta rice retail prices expected to hold stable."
+    },
+    history1M: [
+      { date: "Sep 07", price: 2900, volume: 4100 },
+      { date: "Sep 12", price: 2915, volume: 4200 },
+      { date: "Sep 17", price: 2925, volume: 4300 },
+      { date: "Sep 22", price: 2935, volume: 4400 },
+      { date: "Sep 27", price: 2940, volume: 4450 },
+      { date: "Oct 02", price: 2945, volume: 4480 },
+      { date: "Oct 07", price: 2950, volume: 4500 }
     ]
   }
 ];

@@ -35,33 +35,33 @@ export default function HistoricalTrends({ commodities, lang, t }) {
   });
 
   return (
-    <div className="space-y-8 animate-fadeIn">
+    <div className="space-y-8 animate-fadeIn text-slate-900">
       {/* Header */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-xl">
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-8 shadow-sm">
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 mb-2">
-              <TrendingUp className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300 mb-2">
+              <TrendingUp className="w-3.5 h-3.5 text-emerald-700" />
               {t.trends.title}
             </div>
-            <h2 className="text-2xl font-black text-white">
+            <h2 className="text-2xl font-black text-slate-900">
               {lang === 'ml' ? mainCommodity.nameMl : mainCommodity.name} {t.trends.chartTitle}
             </h2>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-slate-600 mt-1 font-medium">
               {t.trends.subtitle}
             </p>
           </div>
 
           {/* Timeframe Selector */}
-          <div className="flex items-center bg-slate-950 p-1.5 rounded-2xl border border-slate-800 self-start md:self-auto">
+          <div className="flex items-center bg-slate-100 p-1.5 rounded-2xl border border-slate-200 self-start md:self-auto">
             {Object.entries(t.trends.timeframes).map(([tf, label]) => (
               <button
                 key={tf}
                 onClick={() => setTimeframe(tf)}
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
                   timeframe === tf
-                    ? 'bg-emerald-600 text-white shadow'
-                    : 'text-slate-400 hover:text-white'
+                    ? 'bg-emerald-600 text-white shadow-sm'
+                    : 'text-slate-600 hover:text-slate-900'
                 }`}
               >
                 {label}
@@ -71,16 +71,16 @@ export default function HistoricalTrends({ commodities, lang, t }) {
         </div>
 
         {/* Commodity & Comparison Controls */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-800">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-100">
           <div>
-            <label className="block text-xs font-semibold text-slate-400 mb-1.5 flex items-center gap-1.5">
-              <Sliders className="w-3.5 h-3.5 text-emerald-400" />
+            <label className="block text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <Sliders className="w-3.5 h-3.5 text-emerald-700" />
               {t.trends.selectCommodity}
             </label>
             <select
               value={selectedId}
               onChange={(e) => setSelectedId(e.target.value)}
-              className="w-full bg-slate-950 text-white px-4 py-2.5 rounded-xl border border-slate-700 text-xs focus:border-emerald-500 focus:outline-none cursor-pointer"
+              className="w-full bg-slate-50 text-slate-900 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold focus:border-emerald-600 focus:outline-none cursor-pointer"
             >
               {commodities.map((c) => (
                 <option key={c.id} value={c.id}>
@@ -91,14 +91,14 @@ export default function HistoricalTrends({ commodities, lang, t }) {
           </div>
 
           <div>
-            <label className="block text-xs font-semibold text-slate-400 mb-1.5 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+            <label className="block text-xs font-bold text-slate-700 mb-1.5 flex items-center gap-1.5">
+              <Sparkles className="w-3.5 h-3.5 text-amber-600" />
               {t.trends.compareWith}
             </label>
             <select
               value={compareId}
               onChange={(e) => setCompareId(e.target.value)}
-              className="w-full bg-slate-950 text-white px-4 py-2.5 rounded-xl border border-slate-700 text-xs focus:border-emerald-500 focus:outline-none cursor-pointer"
+              className="w-full bg-slate-50 text-slate-900 px-4 py-2.5 rounded-xl border border-slate-200 text-xs font-semibold focus:border-emerald-600 focus:outline-none cursor-pointer"
             >
               <option value="none">None (Single Line View)</option>
               {commodities
@@ -114,15 +114,15 @@ export default function HistoricalTrends({ commodities, lang, t }) {
       </div>
 
       {/* Main Recharts Line Chart */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl relative">
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm relative">
         {/* Monsoon Overlay Banner */}
-        <div className="bg-slate-950/80 p-3 rounded-xl border border-slate-800 mb-4 flex items-center justify-between text-xs">
-          <span className="flex items-center gap-2 text-cyan-300 font-semibold">
-            <CloudRain className="w-4 h-4 text-cyan-400" />
+        <div className="bg-emerald-50/70 p-3 rounded-xl border border-emerald-200 mb-4 flex items-center justify-between text-xs font-semibold">
+          <span className="flex items-center gap-2 text-teal-800">
+            <CloudRain className="w-4 h-4 text-teal-600" />
             {t.trends.monsoonEvent}
           </span>
-          <span className="text-amber-300 font-medium flex items-center gap-1">
-            <Calendar className="w-3.5 h-3.5" />
+          <span className="text-amber-800 flex items-center gap-1">
+            <Calendar className="w-3.5 h-3.5 text-amber-600" />
             {t.trends.onamEvent}
           </span>
         </div>
@@ -130,33 +130,34 @@ export default function HistoricalTrends({ commodities, lang, t }) {
         <div className="h-80 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
               <XAxis dataKey="date" stroke="#64748b" tick={{ fontSize: 11 }} />
               <YAxis stroke="#64748b" tick={{ fontSize: 11 }} domain={['auto', 'auto']} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#090d16',
-                  borderColor: '#334155',
+                  backgroundColor: '#ffffff',
+                  borderColor: '#cbd5e1',
                   borderRadius: '12px',
-                  color: '#fff',
-                  fontSize: '12px'
+                  color: '#0f172a',
+                  fontSize: '12px',
+                  boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1)'
                 }}
               />
               <Line
                 type="monotone"
                 dataKey={mainCommodity.name}
-                stroke="#10b981"
+                stroke="#059669"
                 strokeWidth={3}
-                dot={{ r: 4, fill: '#10b981' }}
+                dot={{ r: 4, fill: '#059669' }}
                 activeDot={{ r: 7 }}
               />
               {compareCommodity && (
                 <Line
                   type="monotone"
                   dataKey={compareCommodity.name}
-                  stroke="#f59e0b"
+                  stroke="#d97706"
                   strokeWidth={3}
-                  dot={{ r: 4, fill: '#f59e0b' }}
+                  dot={{ r: 4, fill: '#d97706' }}
                 />
               )}
             </LineChart>
@@ -165,23 +166,23 @@ export default function HistoricalTrends({ commodities, lang, t }) {
       </div>
 
       {/* Trade Volume Chart */}
-      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-xl">
-        <h3 className="text-sm font-bold text-white mb-4 flex items-center gap-2">
-          <TrendingUp className="w-4 h-4 text-emerald-400" />
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+        <h3 className="text-sm font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <TrendingUp className="w-4 h-4 text-emerald-600" />
           {t.trends.volumeChartTitle} ({mainCommodity.name})
         </h3>
         <div className="h-44 w-full">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={chartData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#1e293b" />
+              <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
               <XAxis dataKey="date" stroke="#64748b" tick={{ fontSize: 11 }} />
               <YAxis stroke="#64748b" tick={{ fontSize: 11 }} />
               <Tooltip
                 contentStyle={{
-                  backgroundColor: '#090d16',
-                  borderColor: '#334155',
+                  backgroundColor: '#ffffff',
+                  borderColor: '#cbd5e1',
                   borderRadius: '12px',
-                  color: '#fff',
+                  color: '#0f172a',
                   fontSize: '12px'
                 }}
               />
