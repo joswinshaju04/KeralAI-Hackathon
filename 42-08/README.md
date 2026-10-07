@@ -1,4 +1,4 @@
-# KeralAI — Kerala Commodity Price Intelligence Platform
+# KeramPulse — Kerala Commodity Price Intelligence Platform
 
 > **IBM × Kerala Government Hackathon 2026 — Challenge 8: Kerala Commodity Price Intelligence**
 
@@ -22,7 +22,7 @@ The hackathon challenge asks for a platform that helps users understand and moni
 - Price alerts
 - Market insights
 
-The KeralAI prototype addresses these requirements through a single interactive dashboard experience.
+The KeramPulse prototype addresses these requirements through a single interactive dashboard experience.
 
 ---
 
@@ -171,7 +171,7 @@ The repository's package configuration defines React, React DOM, Tailwind CSS, R
 The `main` branch currently follows a lightweight Vite/React structure:
 
 ```text
-KeralAI-Hackathon/
+KeramPulse-Hackathon/
 │
 ├── public/
 │
